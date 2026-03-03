@@ -4,8 +4,8 @@ FROM python:3.11-slim
 # Définir le répertoire de travail dans le conteneur
 WORKDIR /app
 
-# Copier les fichiers de dépendances en premier pour optimiser le cache Docker
-COPY pyproject.toml uv.lock ./
+# Copier les fichiers de dépendances et README en premier pour optimiser le cache Docker
+COPY pyproject.toml uv.lock README.md ./
 
 # Installer uv pour gérer les dépendances
 RUN pip install --no-cache-dir uv
