@@ -1,69 +1,135 @@
-Installation
-============
+📦 Installation
+===============
 
 Cette page décrit comment installer et configurer le Projet 1 sur votre machine.
 
-Prérequis
----------
+.. admonition:: ⚡ Installation Rapide
+   :class: tip
+
+   Pour les utilisateurs pressés :
+
+   .. code-block:: bash
+
+      git clone https://github.com/Roxiina/Projet-1.git
+      cd Projet-1
+      uv sync
+      uv run python app/main.py
+
+----
+
+🔧 Prérequis
+------------
 
 Avant de commencer, assurez-vous d'avoir :
 
-* Python 3.11 ou supérieur
-* `uv <https://github.com/astral-sh/uv>`_ installé
-* Git pour cloner le dépôt
+.. grid:: 1 1 2 3
+   :gutter: 2
 
-Installation de uv
-------------------
+   .. grid-item-card:: 🐍 Python
+      :text-align: center
+
+      Version **3.11** ou supérieure
+
+      `Télécharger Python <https://www.python.org/downloads/>`_
+
+   .. grid-item-card:: ⚡ uv
+      :text-align: center
+
+      Gestionnaire de dépendances moderne
+
+      `Installer uv <https://github.com/astral-sh/uv>`_
+
+   .. grid-item-card:: 📂 Git
+      :text-align: center
+
+      Pour cloner le dépôt
+
+      `Télécharger Git <https://git-scm.com/>`_
+
+----
+
+⚡ Installation de uv
+---------------------
 
 Si vous n'avez pas encore installé ``uv``, suivez ces instructions :
 
-.. code-block:: bash
+.. tab-set::
 
-   # Sur macOS et Linux
-   curl -LsSf https://astral.sh/uv/install.sh | sh
+   .. tab-item:: Linux/macOS
 
-   # Sur Windows (PowerShell)
-   irm https://astral.sh/uv/install.ps1 | iex
+      .. code-block:: bash
 
-Installation du Projet
-----------------------
+         curl -LsSf https://astral.sh/uv/install.sh | sh
 
-Étape 1: Cloner le dépôt
-^^^^^^^^^^^^^^^^^^^^^^^^^
+   .. tab-item:: Windows (PowerShell)
 
-.. code-block:: bash
+      .. code-block:: powershell
 
-   git clone https://github.com/USERNAME/projet1.git
-   cd projet1
+         irm https://astral.sh/uv/install.ps1 | iex
 
-Étape 2: Installer les dépendances
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   .. tab-item:: Alternative (via pip)
 
-.. code-block:: bash
+      .. code-block:: bash
 
-   # Installation des dépendances de production
-   uv sync
+         pip install uv
 
-   # Installation avec les dépendances de développement
-   uv sync --all-extras
+----
 
-Étape 3: Vérifier l'installation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+🚀 Installation du Projet
+--------------------------
 
-.. code-block:: bash
+.. grid:: 1
 
-   # Exécuter l'application
-   uv run python app/main.py
+   .. grid-item::
 
-   # Lancer les tests
-   uv run pytest
+      **Étape 1️⃣ : Cloner le dépôt**
 
-Si tout fonctionne correctement, vous devriez voir l'application s'exécuter sans erreur.
+      .. code-block:: bash
 
-Installation avec Docker
-------------------------
+         git clone https://github.com/Roxiina/Projet-1.git
+         cd Projet-1
 
-Si vous préférez utiliser Docker :
+   .. grid-item::
+
+      **Étape 2️⃣ : Installer les dépendances**
+
+      .. tab-set::
+
+         .. tab-item:: Production
+
+            .. code-block:: bash
+
+               uv sync --no-dev
+
+         .. tab-item:: Développement (Recommandé)
+
+            .. code-block:: bash
+
+               uv sync
+
+   .. grid-item::
+
+      **Étape 3️⃣ : Vérifier l'installation**
+
+      .. code-block:: bash
+
+         # Exécuter l'application
+         uv run python app/main.py
+
+         # Lancer les tests
+         uv run pytest
+
+      .. admonition:: ✅ Succès !
+         :class: tip
+
+         Si tout fonctionne correctement, vous devriez voir l'application s'exécuter avec la sortie des fonctions mathématiques et du traitement CSV.
+
+----
+
+🐳 Installation avec Docker
+----------------------------
+
+Si vous préférez utiliser Docker pour une installation isolée :
 
 .. code-block:: bash
 
@@ -73,49 +139,90 @@ Si vous préférez utiliser Docker :
    # Exécuter le conteneur
    docker run --rm projet1:latest
 
-Configuration de l'Environnement de Développement
---------------------------------------------------
+.. admonition:: 💡 Astuce Docker
+   :class: note
 
-Pour le développement, il est recommandé d'installer les hooks pre-commit :
+   L'image Docker est optimisée avec un ``.dockerignore`` et utilise Python 3.11-slim pour une taille réduite.
 
-.. code-block:: bash
+----
 
-   # Installer pre-commit
-   uv add --dev pre-commit
+🛠️ Configuration de l'Environnement de Développement
+-----------------------------------------------------
 
-   # Installer les hooks
-   uv run pre-commit install
-
-Cela garantit que votre code est vérifié automatiquement avant chaque commit.
-
-Dépannage
----------
-
-Problème de Version Python
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Si vous obtenez une erreur liée à la version Python :
+Pour une expérience de développement optimale :
 
 .. code-block:: bash
 
-   # Vérifier la version Python
-   python --version
+   # Installation complète avec outils de dev
+   uv sync
 
-   # Mettre à jour la version cible
-   uv python pin 3.11
+   # Vérifier la configuration Ruff
+   uv run ruff check .
 
-Problème d'Installation des Dépendances
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   # Exécuter les tests avec couverture
+   uv run pytest --cov=app --cov-report=html
 
-Si l'installation échoue :
+----
 
-.. code-block:: bash
+🔴 Dépannage
+------------
 
-   # Nettoyer le cache
-   uv cache clean
+.. dropdown:: ❌ Problème de Version Python
+   :color: danger
 
-   # Réessayer l'installation
-   uv sync --reinstall
+   Si vous obtenez une erreur liée à la version Python :
+
+   .. code-block:: bash
+
+      # Vérifier la version Python
+      python --version
+
+      # Mettre à jour la version cible avec uv
+      uv python pin 3.11
+
+.. dropdown:: ❌ Problème d'Installation des Dépendances
+   :color: danger
+
+   Si l'installation échoue :
+
+   .. code-block:: bash
+
+      # Nettoyer le cache uv
+      uv cache clean
+
+      # Réessayer l'installation
+      uv sync --reinstall
+
+.. dropdown:: ❌ Docker non disponible
+   :color: danger
+
+   Si Docker n'est pas installé :
+
+   - Téléchargez `Docker Desktop <https://www.docker.com/products/docker-desktop/>`_
+   - Démarrez Docker Desktop
+   - Relancez la commande ``docker build``
+
+----
+
+📚 Prochaines Étapes
+--------------------
+
+Maintenant que l'installation est terminée, consultez :
+
+.. grid:: 1 1 2 2
+   :gutter: 2
+
+   .. grid-item-card:: 📖 Guide d'Utilisation
+      :link: usage
+      :link-type: doc
+
+      Découvrez comment utiliser les fonctionnalités du projet
+
+   .. grid-item-card:: 📚 Référence API
+      :link: api/modules
+      :link-type: doc
+
+      Documentation complète de toutes les fonctions
 
 Étapes Suivantes
 ----------------
