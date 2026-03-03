@@ -1,0 +1,84 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+  pull_request:
+    branches:
+      - main
+      - dev
+      - 'feat/**'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout du code
+        uses: actions/checkout@v4
+
+      - name: Configuration de Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Installation de uv
+        run: |
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+          echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+
+      - name: Installation des dépendances
+        run: |
+          uv sync --frozen
+
+      - name: Vérification du formatage avec Ruff
+        run: |
+          uv run ruff check .
+
+      - name: Vérification du formatage du code
+        run: |
+          uv run ruff format --check .
+
+      - name: Exécution des tests avec Pytest
+        run: |
+          uv run pytest
+
+      - name: Audit de sécurité - Vérification des secrets
+        run: |
+          if grep -r -i "password\s*=\s*['\"]" . --exclude-dir=.git --exclude-dir=node_modules --exclude-dir=venv --exclude="*.md"; then
+            echo "⚠️ ATTENTION: Des secrets potentiels ont été trouvés dans le code!"
+            exit 1
+          fi
+          if grep -r -i "api_key\s*=\s*['\"]" . --exclude-dir=.git --exclude-dir=node_modules --exclude-dir=venv --exclude="*.md"; then
+            echo "⚠️ ATTENTION: Des clés API potentielles ont été trouvées dans le code!"
+            exit 1
+          fi
+          echo "✅ Aucun secret détecté dans le code"
+
+      - name: Génération du rapport de couverture
+        run: |
+          uv run pytest --cov=app --cov-report=xml --cov-report=term
+
+      - name: Upload du rapport de couverture
+        uses: codecov/codecov-action@v3
+        with:
+          file: ./coverage.xml
+          fail_ci_if_error: false
+
+  docker:
+    runs-on: ubuntu-latest
+    needs: test
+
+    steps:
+      - name: Checkout du code
+        uses: actions/checkout@v4
+
+      - name: Build de l'image Docker
+        run: |
+          docker build -t projet1:latest .
+
+      - name: Test de l'image Docker
+        run: |
+          docker run --rm projet1:latest
