@@ -1,6 +1,6 @@
 # Projet 1 : Fondations, Standardisation et Excellence Technique
 
-![CI Status](https://github.com/USERNAME/projet1/actions/workflows/ci.yml/badge.svg)
+![CI Status](https://github.com/Roxiina/projet1/actions/workflows/ci.yml/badge.svg)
 ![Python Version](https://img.shields.io/badge/python-3.11+-blue.svg)
 ![Code style: ruff](https://img.shields.io/badge/code%20style-ruff-000000.svg)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
@@ -30,7 +30,7 @@ Ce projet constitue une base solide pour le développement d'applications Python
 
 ```bash
 # Cloner le dépôt
-git clone https://github.com/USERNAME/projet1.git
+git clone https://github.com/Roxiina/projet1.git
 cd projet1
 
 # Installer les dépendances avec uv
@@ -143,9 +143,9 @@ Le projet implémente les fonctionnalités suivantes :
 
 ## 👥 Contributeurs
 
-- **Votre Nom** - Développeur principal - [@username](https://github.com/username)
+- **Votre Nom** - Développeur principal - [@Roxiina](https://github.com/Roxiina)
 
-Voir la liste complète des [contributeurs](https://github.com/USERNAME/projet1/contributors) ayant participé à ce projet.
+Voir la liste complète des [contributeurs](https://github.com/Roxiina/projet1/contributors) ayant participé à ce projet.
 
 ## 🤝 Contribution
 
@@ -162,17 +162,17 @@ Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de 
 
 ## 🔗 Liens Utiles
 
-- [Documentation complète](https://username.github.io/projet1/)
-- [Rapport de bugs](https://github.com/USERNAME/projet1/issues)
+- [Documentation complète](https://Roxiina.github.io/projet1/)
+- [Rapport de bugs](https://github.com/Roxiina/projet1/issues)
 - [Guide uv](https://github.com/astral-sh/uv)
 - [Documentation Pytest](https://docs.pytest.org/)
 - [Documentation Ruff](https://docs.astral.sh/ruff/)
 
 ## 📊 Statistiques
 
-![GitHub issues](https://img.shields.io/github/issues/USERNAME/projet1)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/USERNAME/projet1)
-![GitHub stars](https://img.shields.io/github/stars/USERNAME/projet1?style=social)
+![GitHub issues](https://img.shields.io/github/issues/Roxiina/projet1)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/Roxiina/projet1)
+![GitHub stars](https://img.shields.io/github/stars/Roxiina/projet1?style=social)
 
 ---
 
