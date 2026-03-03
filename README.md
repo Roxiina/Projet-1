@@ -143,7 +143,7 @@ Le projet implémente les fonctionnalités suivantes :
 
 ## 👥 Contributeurs
 
-- **Votre Nom** - Développeur principal - [@Roxiina](https://github.com/Roxiina)
+- **Roxina** - Développeur principal - [@Roxiina](https://github.com/Roxiina)
 
 Voir la liste complète des [contributeurs](https://github.com/Roxiina/Projet-1/contributors) ayant participé à ce projet.
 
@@ -176,4 +176,3 @@ Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de 
 
 ---
 
-**Note** : Remplacez `USERNAME` par votre nom d'utilisateur GitHub dans tous les liens.
