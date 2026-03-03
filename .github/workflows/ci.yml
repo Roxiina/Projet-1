@@ -47,11 +47,11 @@ jobs:
 
       - name: Audit de sécurité - Vérification des secrets
         run: |
-          if grep -r -i "password\s*=\s*['\"]" . --exclude-dir=.git --exclude-dir=node_modules --exclude-dir=venv --exclude="*.md"; then
+          if grep -r -i "password\s*=\s*['\"]" . --exclude-dir=.git --exclude-dir=node_modules --exclude-dir=venv --exclude-dir=.venv --exclude="*.md"; then
             echo "⚠️ ATTENTION: Des secrets potentiels ont été trouvés dans le code!"
             exit 1
           fi
-          if grep -r -i "api_key\s*=\s*['\"]" . --exclude-dir=.git --exclude-dir=node_modules --exclude-dir=venv --exclude="*.md"; then
+          if grep -r -i "api_key\s*=\s*['\"]" . --exclude-dir=.git --exclude-dir=node_modules --exclude-dir=venv --exclude-dir=.venv --exclude="*.md"; then
             echo "⚠️ ATTENTION: Des clés API potentielles ont été trouvées dans le code!"
             exit 1
           fi
