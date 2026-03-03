@@ -3,7 +3,7 @@
 Ce module teste le bon fonctionnement de l'application principale.
 """
 
-from unittest.mock import mock_open, patch
+from unittest.mock import patch
 
 import pandas as pd
 import pytest
