@@ -3,6 +3,18 @@
 🎯 Projet 1 : Template Professionnel Python
 ============================================
 
+.. image:: https://github.com/Roxiina/Projet-1/actions/workflows/ci.yml/badge.svg
+   :target: https://github.com/Roxiina/Projet-1/actions/workflows/ci.yml
+   :alt: CI Status
+
+.. image:: https://github.com/Roxiina/Projet-1/actions/workflows/docs.yml/badge.svg
+   :target: https://Roxiina.github.io/Projet-1/
+   :alt: Documentation Status
+
+.. image:: https://img.shields.io/badge/coverage-97%25-brightgreen.svg
+   :target: https://github.com/Roxiina/Projet-1
+   :alt: Test Coverage
+
 .. image:: https://img.shields.io/badge/python-3.11+-blue.svg
    :target: https://www.python.org/downloads/
    :alt: Python Version
