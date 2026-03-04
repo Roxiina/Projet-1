@@ -9,7 +9,7 @@
 [![Python Version](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: ruff](https://img.shields.io/badge/code%20style-ruff-000000.svg)](https://docs.astral.sh/ruff/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Coverage](https://img.shields.io/badge/coverage-97%25-brightgreen.svg)](https://github.com/Roxiina/Projet-1)
+[![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen.svg)](https://github.com/Roxiina/Projet-1)
 
 [Documentation](https://Roxiina.github.io/Projet-1/) •
 [Installation](#-installation-rapide) •
@@ -51,7 +51,7 @@
 |-----------|-------------|-------------|
 | **📦 Gestion de dépendances** | [`uv`](https://github.com/astral-sh/uv) | Gestionnaire ultra-rapide (10-100x plus rapide que pip) |
 | **🎨 Qualité de code** | [`Ruff`](https://docs.astral.sh/ruff/) | Linter et formatter moderne, remplace Flake8 + Black + isort |
-| **🧪 Tests** | [`Pytest`](https://docs.pytest.org/) + [`pytest-cov`](https://pytest-cov.readthedocs.io/) | Suite de tests complète avec 97% de couverture |
+| **🧪 Tests** | [`Pytest`](https://docs.pytest.org/) + [`pytest-cov`](https://pytest-cov.readthedocs.io/) | Suite de tests complète avec 100% de couverture |
 | **📚 Documentation** | [`Sphinx`](https://www.sphinx-doc.org/) + [`Furo`](https://pradyunsg.me/furo/) | Documentation interactive et moderne |
 | **🐳 Conteneurisation** | [`Docker`](https://www.docker.com/) | Images optimisées avec multi-stage builds |
 | **⚙️ CI/CD** | [`GitHub Actions`](https://github.com/features/actions) | Pipeline complet automatisé |
@@ -164,7 +164,7 @@ Nombre de lignes dans le DataFrame: 5
 
 | Métrique | Valeur | Statut |
 |----------|--------|--------|
-| **Couverture de code** | 97% | ✅ Excellent |
+| **Couverture de code** | 100% | ✅ Excellent |
 | **Tests unitaires** | 20/20 passés | ✅ Tous validés |
 | **Linting (Ruff)** | 0 erreur | ✅ Conforme |
 | **Formatage** | 100% | ✅ Normalisé |
@@ -402,7 +402,7 @@ Les contributions sont **chaleureusement accueillies** ! 🎉
 ### ✅ Version 0.1.0 (Actuelle)
 
 - [x] Structure de projet complète
-- [x] Tests avec 97% de couverture
+- [x] Tests avec 100% de couverture
 - [x] Documentation Sphinx moderne
 - [x] CI/CD GitHub Actions
 - [x] Docker optimisé

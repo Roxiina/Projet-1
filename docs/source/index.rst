@@ -11,7 +11,7 @@
    :target: https://Roxiina.github.io/Projet-1/
    :alt: Documentation Status
 
-.. image:: https://img.shields.io/badge/coverage-97%25-brightgreen.svg
+.. image:: https://img.shields.io/badge/coverage-100%25-brightgreen.svg
    :target: https://github.com/Roxiina/Projet-1
    :alt: Test Coverage
 
@@ -168,7 +168,7 @@ Le projet inclut des exemples concrets :
    * - **📊 Traitement CSV**
      - Lecture et manipulation de données avec Pandas
    * - **🧪 Tests Paramétrés**
-     - Suite complète avec pytest, fixtures et 97% de couverture
+     - Suite complète avec pytest, fixtures et 100% de couverture
    * - **📝 Documentation**
      - Docstrings Google format, génération Sphinx automatique
    * - **🐳 Docker**

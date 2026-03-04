@@ -49,5 +49,5 @@ def main() -> None:
     print(f"\nNombre de lignes dans le DataFrame: {nb_lignes}")
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     main()
