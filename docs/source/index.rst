@@ -18,7 +18,7 @@
 .. raw:: html
 
    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2rem; border-radius: 10px; margin: 2rem 0; color: white;">
-      <h2 style="margin-top:0; color: white;">✨ Toolbox de Référence pour l'IA</h2>
+      <h2 style="margin-top:0; color: white;">Toolbox de Référence pour l'IA</h2>
       <p style="font-size: 1.1rem; margin-bottom: 0;">
          Un environnement de développement moderne, automatisé et documenté servant de template 
          pour tous vos projets d'Intelligence Artificielle et Data Science.
